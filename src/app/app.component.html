@@ -2,6 +2,27 @@
 <app-navbar></app-navbar>
 <!-- // end navbar bootstrap 4 -->
 
-<h1>
-  {{title}}
-</h1>
+<!-- // container bootstrap 4 -->
+<div class="container main-container">
+  <div class="row">
+    <div class="col-md-4">
+      <h5>Marcador</h5>
+    </div>
+    <div class="col-md-8">
+      <sebm-google-map
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom" >
+        <sebm-google-map-marker
+          [latitude]="lat"
+          [longitude]="lng">
+            <sebm-google-map-info-window>
+              <strong>Título</strong>
+              <p>Esta es la catedral de Santiago de Compostela</p>
+            </sebm-google-map-info-window>
+        </sebm-google-map-marker>
+      </sebm-google-map>
+    </div>
+  </div>
+</div>
+<!-- // end container bootstrap 4 -->
