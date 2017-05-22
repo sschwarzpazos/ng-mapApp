@@ -12,6 +12,8 @@ export class AppComponent {
   lng: number = -8.544609;
   zoom: number = 16;
 
+  marcadorSel:any = null;
+
   constructor( private _ms:MapasService ) {
     this._ms.cargarMarcadores();
   }
@@ -29,7 +31,7 @@ export class AppComponent {
   }
 
   clickMarcador( marcador: Marcador, indice:number ) {
-
+    this.marcadorSel = marcador;
   }
 
   dragEndMarcador( marcador: Marcador, evento ) {
