@@ -43,4 +43,8 @@ export class AppComponent {
 
     this._ms.guardarMarcadores();
   }
+
+  borrarMarcador( indice:number ) {
+    this._ms.borrarMarcador( indice );
+  }
 }

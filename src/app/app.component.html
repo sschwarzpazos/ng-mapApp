@@ -71,6 +71,13 @@
               <p *ngIf="marcador.desc">
                 {{ marcador.desc }}
               </p>
+              <p>
+                <a
+                  (click)="borrarMarcador( i )"
+                  class="text-danger" >
+                    Borrar marcador
+                </a>
+              </p>
             </sebm-google-map-info-window>
         </sebm-google-map-marker>
       </sebm-google-map>
