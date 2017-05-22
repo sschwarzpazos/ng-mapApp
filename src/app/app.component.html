@@ -5,6 +5,15 @@
 <div class="container main-container">
   <div class="row">
     <div class="col-md-4">
+      <div
+        *ngIf="!marcadorSel"
+        class="animated fadeIn fast">
+        <div class="alert alert-info">
+          <strong>haga click</strong>
+          en el marca para crear un marcador o seleccione uno
+        </div>
+      </div><!-- // *ngIf="!marcadorSel" -->
+
       <div *ngIf="marcadorSel">
         <h5>Marcador</h5>
         <hr>
