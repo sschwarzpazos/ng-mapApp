@@ -1,3 +1,7 @@
+<!-- // navbar bootstrap 4 -->
+<app-navbar></app-navbar>
+<!-- // end navbar bootstrap 4 -->
+
 <div class="container main-container">
   <div class="row">
     <div class="col-md-4">
@@ -10,11 +14,18 @@
         [longitude]="lng"
         [zoom]="zoom" >
         <sebm-google-map-marker
-          [latitude]="lat"
-          [longitude]="lng">
+          *ngFor="let marcador of _ms.marcadores"
+          [latitude]="marcador.lat"
+          [longitude]="marcador.lng"
+          [title]="marcador.titulo"
+          [markerDraggable]="marcador.draggable">
             <sebm-google-map-info-window>
-              <strong>Título</strong>
-              <p>Esta es la catedral de Santiago de Compostela</p>
+              <strong>
+                {{ marcador.titulo }}
+              </strong>
+              <p *ngIf="marcador.desc">
+                {{ marcador.desc }}
+              </p>
             </sebm-google-map-info-window>
         </sebm-google-map-marker>
       </sebm-google-map>
