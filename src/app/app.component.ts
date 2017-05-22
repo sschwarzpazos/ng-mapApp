@@ -33,6 +33,12 @@ export class AppComponent {
   }
 
   dragEndMarcador( marcador: Marcador, evento ) {
+    let lat = evento.coords.lat;
+    let lng = evento.coords.lng;
 
+    marcador.lat = lat;
+    marcador.lng = lng;
+
+    this._ms.guardarMarcadores();
   }
 }
