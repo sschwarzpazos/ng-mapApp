@@ -23,6 +23,7 @@
         "styles.css"
       ],
       "scripts": [
+        "assets/jquery/jquery.slim.min.js",
         "assets/tether/tether.js"
       ],
       "environmentSource": "environments/environment.ts",
