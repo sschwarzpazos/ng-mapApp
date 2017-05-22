@@ -31,11 +31,12 @@
         <div class="form-group">
           <label>Se puede mover?</label>
           <select
-            [(ngModel)]="marcadorSel.draggable"
+            [(ngModel)]="draggable"
+            (change)="cambiarDraggable()"
             class="form-control"
             name="draggable">
-              <option value="true">Sí</option>
-              <option value="false">No</option>
+              <option value="1">Sí</option>
+              <option value="0">No</option>
           </select>
         </div>
 

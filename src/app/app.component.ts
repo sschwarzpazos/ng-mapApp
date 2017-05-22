@@ -13,6 +13,7 @@ export class AppComponent {
   zoom: number = 16;
 
   marcadorSel:any = null;
+  draggable:string = '1';
 
   constructor( private _ms:MapasService ) {
     this._ms.cargarMarcadores();
@@ -46,5 +47,9 @@ export class AppComponent {
 
   eliminarMarcador( indice: number ) {
     this._ms.eliminarMarcador( indice );
+  }
+
+  cambiarDraggable() {
+    this.marcadorSel.draggable = (this.draggable === "1") ? true : false;  
   }
 }
