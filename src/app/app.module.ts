@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+//services
+import { MapasService } from './services/mapas.service';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -16,7 +19,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    MapasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
