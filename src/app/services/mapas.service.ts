@@ -21,4 +21,8 @@ export class MapasService {
     this.marcadores.push( nuevoMarcador );
   }
 
+  guardarMarcadores() {
+    localStorage.setItem( 'marcadores', JSON.stringify( this.marcadores ) );
+  }
+
 }
