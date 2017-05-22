@@ -33,4 +33,9 @@ export class MapasService {
     }
   }
 
+  eliminarMarcador( indice:number ) {
+    this.marcadores.splice( indice, 1 );
+    this.guardarMarcadores();
+  }
+
 }
