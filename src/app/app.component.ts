@@ -33,6 +33,8 @@ export class AppComponent {
 
   clickMarcador( marcador: Marcador, indice:number ) {
     this.marcadorSel = marcador;
+
+    this.draggable = (this.marcadorSel.draggable) ? '1' : '0';
   }
 
   dragEndMarcador( marcador: Marcador, evento ) {
@@ -50,6 +52,6 @@ export class AppComponent {
   }
 
   cambiarDraggable() {
-    this.marcadorSel.draggable = (this.draggable === "1") ? true : false;  
+    this.marcadorSel.draggable = (this.draggable === "1") ? true : false;
   }
 }
