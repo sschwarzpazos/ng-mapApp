@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+//services
+import { MapasService } from './services/mapas.service';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -21,7 +24,9 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
       apiKey: 'AIzaSyBPvf-REeXnpop4KGV18XOk9bWati_r56Y'
     })
   ],
-  providers: [],
+  providers: [
+    MapasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
