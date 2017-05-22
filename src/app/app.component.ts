@@ -49,6 +49,7 @@ export class AppComponent {
 
   eliminarMarcador( indice: number ) {
     this._ms.eliminarMarcador( indice );
+    this.marcadorSel = null;
   }
 
   cambiarDraggable() {
