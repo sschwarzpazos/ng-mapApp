@@ -17,4 +17,8 @@ export class MapasService {
 
   }
 
+  insertarMarcador( nuevoMarcador:Marcador ) {
+    this.marcadores.push( nuevoMarcador );
+  }
+
 }
