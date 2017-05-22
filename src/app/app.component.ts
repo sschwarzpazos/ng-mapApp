@@ -31,4 +31,8 @@ export class AppComponent {
   clickMarcador( marcador: Marcador, indice:number ) {
 
   }
+
+  dragEndMarcador( marcador: Marcador, evento ) {
+
+  }
 }

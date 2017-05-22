@@ -16,6 +16,7 @@
         <sebm-google-map-marker
           *ngFor="let marcador of _ms.marcadores; let i = index;"
           (markerClick)="clickMarcador( marcador, i )"
+          (dragEnd)="dragEndMarcador( marcador, $event )"
           [latitude]="marcador.lat"
           [longitude]="marcador.lng"
           [title]="marcador.titulo"
