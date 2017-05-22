@@ -27,4 +27,8 @@ export class AppComponent {
     this._ms.insertarMarcador( nuevoMarcador );
     this._ms.guardarMarcadores();
   }
+
+  clickMarcador( marcador: Marcador, indice:number ) {
+
+  }
 }

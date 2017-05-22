@@ -14,7 +14,8 @@
         [longitude]="lng"
         [zoom]="zoom" >
         <sebm-google-map-marker
-          *ngFor="let marcador of _ms.marcadores"
+          *ngFor="let marcador of _ms.marcadores; let i = index;"
+          (markerClick)="clickMarcador( marcador, i )"
           [latitude]="marcador.lat"
           [longitude]="marcador.lng"
           [title]="marcador.titulo"
