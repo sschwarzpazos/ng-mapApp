@@ -25,4 +25,12 @@ export class MapasService {
     localStorage.setItem( 'marcadores', JSON.stringify( this.marcadores ) );
   }
 
+  cargarMarcadores() {
+    if ( localStorage.getItem( 'marcadores' ) ) {
+      this.marcadores = JSON.parse( localStorage.getItem( 'marcadores' ) );
+    } else {
+      this.marcadores = [];
+    }
+  }
+
 }
